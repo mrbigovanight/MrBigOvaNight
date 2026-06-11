@@ -1,0 +1,86 @@
+body, html {
+margin: 0px;
+background:linear-gradient(45deg,rgba(255,255,255,1), rgba(80,80,80,1));
+}
+
+.nav-container {
+
+flex-direction: column;
+align-items: center;
+justify-content: center;
+margin: 0vw;
+background-color: rgba(0,0,0,0);
+}
+
+.nav-links-container {
+display: flex;
+gap: 3vw;
+background-color: rgba(0,0,0,0);
+}
+
+nav {
+display: flex;
+align-items: center;
+justify-content: space-between;
+background-color: rgba(0,0,0,0);
+padding: 1.5vw 3vw;
+}
+
+.header-links {
+text-decoration: none;
+color: white;
+}
+
+main {
+background-image: url('mrboncouple.jpg');
+background-repeat: no-repeat;
+background-size: 100%;
+aspect-ratio: 16/9;
+}
+
+.join-container {
+background-color: rgba(245,245,220,0.2);
+padding: 1vw 2vw;
+border-radius: 100px;
+backdrop-filter: blur(10px);
+}
+
+.join-link {
+text-decoration: none;
+text-wrap: none;
+color: beige;
+}
+
+.join-container:hover {
+text-decoration: underline;
+}
+
+.main-div {
+display: flex;
+flex-direction: column;
+}
+
+.focus-sentence-div {
+  padding: 3vw ;
+}
+
+.focus-sentence {
+font-size: clamp(3rem,2vw,8rem);
+color: beige;
+}
+
+.featured-articles-container {
+background-color: rgba(255,255,255,0.3);
+border-radius: 20px;
+padding: 2vw;
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+
+}
+
+.article-choice-img {
+aspect-ratio: 16/9;
+max-width: 200px;
+}
