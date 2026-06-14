@@ -83,14 +83,17 @@ gap: 2vw;
 }
 
 .action-container {
-background-color: blue;
+position: absolute;
+bottom: 0px;
+background-color: transparent;
 display: grid;
 grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+padding: 1vw 0px;
 }
 
 .review-container {
 padding: 0px 30px;
-background-color: green;
+background-color: transparent;
 }
 
 .review-img-container {
@@ -112,17 +115,26 @@ margin-left: -20px;
 
 .rating-text {
 margin-left: 10px;
+color: white;
 }
 
-.qoutes-section {
-background-color: yellow;
+.qoutes-section, .review-container {
+background-color: rgba(0,0,0,0.70);
 display: flex;
 flex-direction: column; 
 align-items: center;
 justify-content: center;
-padding: 10px;
+padding: 3vw;
+margin: 0px 1vw;
+backdrop-filter: blur(10px);
+border: 1px solid rgba(255,255,255,0.1);
+border-radius: 10px;
+}
+
+.qoute, .hero-heading {
+color: white;
 }
 
 .featured-articles-container {
-background-color: pink;
+background-color: transparent;
 }
