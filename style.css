@@ -1,6 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Gasoek+One&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
 
-
 * {
 font-family: "Roboto Mono";
 }
@@ -21,7 +20,7 @@ aspect-ratio: 16/10;
 header {
 display: flex;
 flex-direction: column;
-align-items:stretch;
+align-items: flex-start;
 justify-content: space-between;
 margin: 0;
 height: 100vh;
@@ -32,23 +31,29 @@ background-repeat: no-repeat;
 
 .nav-container {
 display: flex;
-flex-direction: column;
+flex-direction: row;
 align-items: flex-start;
-justify-content: space-between;
+justify-content: flex-start;
 padding: 0px;
-gap: 10px;
-background-color: transparent;
+gap: 0px;
+background-color: black;
+object-fit: contain;
+min-height: max-content;
+position: sticky;
+top: 0px;
+left: 0px;
 }
 
 .nav-link {
-color: lightgoldenrodyellow;
-padding: 10px 15px;
+color: #f5ddaf;
+padding: 2vh 4vw 2vh 6vw;
 border-radius: 0px;
-/*font-family: "Gasoek One", sans-serif;*/
-font-size: clamp(1rem,2vw,1.2rem);
-font-weight: 400;
-background: linear-gradient(0deg, rgba(0,0,0,0), rgba(0,0,0,1));
-
+font-weight: 100;
+background-color: rgba(30,30,30,0.5);
+border-left: 2px solid rgba(0,0,0,1);
+border-right: 2px solid rgba(0,0,0,1);
+border-bottom: 2px solid rgba(0,0,0,1);
+min-width: 100px;
 }
 
 .nav-link, .join-link {
@@ -86,7 +91,6 @@ background-color: beige;
 color: black;
 }
 
-
 .action-container {
 background-color: transparent;
 /*display: grid;
@@ -104,7 +108,7 @@ flex-wrap: nowrap;
 .review-container {
 padding: 0px 30px;
 background-color: transparent;
-min-width: 30%;
+min-width: 100px;
 max-width: 300px;
 min-height: max-content;
 }
@@ -117,6 +121,7 @@ flex-wrap: wrap;
 }
 
 .review-img {
+min-width: 3vw;
 max-width: 40px;
 aspect-ratio: 1/1;
 object-fit:cover;
@@ -127,7 +132,6 @@ border: 1px solid white;
 .review-img:not(:first-child) {
 margin-left: -20px;
 }
-
 
 .rating-text {
 margin-left: 10px;
@@ -159,6 +163,7 @@ background-color: transparent;
 }
 
 .logo-container {
+margin: 50px 0px 0px 0px;
 display: flex;
 align-items: center;
 justify-content: center;
@@ -167,67 +172,100 @@ justify-content: center;
 .logo-img {
 padding: 10px;
 min-width: 300px;
-max-width: 300px
+max-width: 300px;
 }
 
 nav {
 display: flex;
-flex-direction: row;
-align-items: center;
-background-color: ;
-backdrop-filter: blur(0px);
-gap: 1vw;
+flex-direction: column;
+align-items: flex-start;
+background: linear-gradient(45deg,rgba(0,0,0,0.7));
+backdrop-filter: blur(10px);
+gap: 0px;
 flex-wrap: nowrap;
-justify-content: center;
-width: 100vw;
+justify-content: stretch;
 border-top: 0px solid black;
-border-bottom: 0px solid black;
+border-bottom: 1px solid black;
 padding-top: 0px;
+object-fit: contain;
+position: sticky;
+top: 0px;
+left: 0px;
 }
 
-.header-container {
+.body-container {
 display: flex;
-flex-direction: column;
-background-color: rgba(0,0,0,0.0);
-backdrop-filter: blur(0px);
 }
+
+.menu-button {
+background-color: rgba(46, 50, 50, 0.4);
+border: 1px solid black;
+margin: 20px 0px 0px 20px;
+padding: 8px 30px;
+max-width: 50px;
+display: flex;
+align-items: center;
+justify-content: center;
+border-radius: 10px;
+backdrop-filter: blur(10px);
+max-height: 50px;
+scale: 0.9;
+position: sticky;
+top: 20px;
+left: 20px;
+z-index: 1000000;
+box-shadow: -2px 4px 5px rgba(0,0,0,0.4);
+
+}
+
+.none {
+display: none;
+}
+
+.info-container {
+display: flex;
+flex-direction: row;
+flex-wrap: wrap;
+align-items: center;
+justify-content: center;
+}
+
+.menu-text {
+color: lightgreen;
+
+}
+
 
 .scroll_div {
-  display: flex;
-  align-items: center;
-  justify-content: center;
 overflow: hidden;
 width: 100vw;
-background: linear-gradient(45deg, rgba(80,80,80,0.5), rgba(0,255,9,0.5));
+background: #000000;
 padding: 1vh 0;
 Z-index: 10000000000000;
-backdrop-filter: blur(10px);
 }
 
 .scroll_track {
 display: flex;
-align-items: center;
-justify-content: center;
 width: max-content;
 animation: scroll 20s linear infinite;
 }
 
 .scroll_text {
 display: flex;
-align-items: center;
-justify-content: center;
 white-space: nowrap;
 }
 
 .discount_span {
+font-family: "Cause", cursive;
 margin-left: 10vw;
 font-size: 1rem;
-font-weight: 300;
-background:  rgba(0,255,9,0);
-color: black;
+font-weight: 400;
+background-color: #000000;
+color: #ffffff;
 padding: 0px;
-border-radius: 0px;
+border-radius: 1000px;
 }
+
 
 @keyframes scroll {
   from {
@@ -237,4 +275,5 @@ border-radius: 0px;
     transform: translateX(-50%);
   }
 }
+
 
