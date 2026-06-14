@@ -18,7 +18,7 @@ align-items:stretch;
 justify-content: space-between;
 margin: 0;
 height: 100vh;
-background-image: url("mrboncouple.jpg");
+background-image: url("jungle-4191340_1280.jpg");
 background-size: cover;
 background-repeat: no-repeat;
 }
@@ -34,10 +34,6 @@ gap: 10px;
 
 .nav-link {
 color:white;
-}
-
-.logo-text {
-color: white;
 }
 
 .nav-link, .join-link {
@@ -83,8 +79,6 @@ gap: 2vw;
 }
 
 .action-container {
-position: absolute;
-bottom: 0px;
 background-color: transparent;
 display: grid;
 grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
@@ -137,4 +131,15 @@ color: white;
 
 .featured-articles-container {
 background-color: transparent;
+}
+
+.logo-container {
+display: flex;
+align-items: center;
+justify-content: center;
+}
+
+.logo-img {
+max-width: 100px;
+
 }
