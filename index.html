@@ -2,77 +2,67 @@
 <html lang="en"> 
 <head>   
 <meta charset="UTF-8" />   
-<title>Lions Den</title>   
+<title>MRBON</title>   
 <meta name="viewport" content="width=device-width,initial-scale=1" />   
 <meta name="description" content="" />   
 <link rel="stylesheet" type="text/css" href="style.css" />   
-<link rel="icon" href="favicon.png"> 
+<link rel="icon" href="logo.png"> 
 </head> 
-<body>
-   <div class="scroll_div">
-	<div class="scroll_track">
-	   <div class="scroll_text">
-	      <span class="discount_span">#TheGlazePopStudio</span>
-	      <span class="discount_span">15% off purchases over $50</span>
-	      <span class="discount_span">#MadeFreshToOrder</span>
-	      <span class="discount_span">#VirginiaLovesCakePops</span>
-	   </div>
-	   <div class="scroll_text">
-	      <span class="discount_span">#TheGlazePopStudio</span>
-	      <span class="discount_span">15% off purchases over $50</span>
-	      <span class="discount_span">#MadeFreshToOrder</span>
-	      <span class="discount_span">#VirginiaLovesCakePops</span>
-	   </div>
-	</div>
-      </div>
-
-  <div class="body-container">
-  <div id="menu" class="nav-container">
-  <nav>
-  <a href="" class="nav-link">Programs</a>
-  <a href="" class="nav-link">Videos</a>
-  <a href="" class="nav-link">Articles</a>
-  <a href="" class="nav-link">Socials</a>
-  <a href="" class="nav-link">About Me</a>
+<body class="body-container">
+  
+  <nav id="menu">
+  <button onclick="programToggle()" class="nav-button nav-text">Programs <div>&#8964;</div></button>
+  <button id="programLink1" class="nav-button nav-choice none"><a class="nav-link-text" href="" >Lions Den</a></button>
+  <button onclick="videoToggle()" class="nav-button nav-text">Videos <div>&#8964;</div></button>
+   <button id="videoLink1" class="nav-button nav-choice"><a class="nav-link-text" href="" >All</a></button>
+  <button id="videoLink2" class="nav-button nav-choice"><a class="nav-link-text" href="" >Featured</a></button>
+  <button id="videoLink3" class="nav-button nav-choice"><a class="nav-link-text" href="" >Recent</a></button>
+  <button onclick="articleToggle()" class="nav-button nav-text">Articles <div>&#8964;</div></button>
+  <button id="articleLink1" class="nav-button nav-choice"><a class="nav-link-text" href="" >All</a></button>
+  <button id="articleLink2" class="nav-button nav-choice"><a class="nav-link-text" href="" >Featured</a></button>
+  <button id="articleLink3" class="nav-button nav-choice"><a class="nav-link-text" href="" >Recent</a></button>
+  <button class="nav-button nav-text">Socials <div>&#8964;</div></button>
+  <button class="nav-button nav-choice"><a class="nav-link-text" href="" >Tiktok</a></button>
+  <button class="nav-button nav-choice"><a class="nav-link-text" href="" >Youtube</a></button>
+  <button class="nav-button nav-choice"><a class="nav-link-text" href="" >Reddit</a></button>
+  <button class="nav-button nav-choice"><a class="nav-link-text" href="" >Tumblr</a></button>
+  <button class="nav-button nav-choice"><a class="nav-link-text" href="" >Instagram</a></button>
+  <button class="nav-button nav-choice"><a class="nav-link-text" href="" >X (Twitter)</a></button>
+  <button class="nav-button"><a class="nav-text" href="" >Affiliates</a></button>
+  <button class="nav-button"><a class="nav-text" href="" >Donate</a></button>
+  <button class="nav-button nav-text">About <div>&#8964;</div></button>
+  <button class="nav-button nav-choice"><a class="nav-link-text" href="" >Lions Den</a></button>
+  <button class="nav-button nav-choice"><a class="nav-link-text" href="" >MRBON</a></button>
   </nav> 
-  </div>
+
+
 <header>
-  <button class="menu-button" onclick="menuToggle()">
-    <span class="menu-text">Menu</span>
+   <button class="menu-button" onclick="menuToggle()">
+  <span class="menu-text">Menu</span>
   </button>
- 
-  <div class="info-container">
-  <div class="logo-container">
-    <img class="logo-img" src="logo.png" alt="Lions Den Logo"/>
-  </div>
-  </div>
-  <div class="action-container">
+  <h1 class="heading">PREPARE FOR STORMS,<br>BY EMBRACING THEM</h1>
+      <div class="action-container">
     <div class="review-container">
-          <h3 class="hero-heading">Join The Lions Den Today</h3>
+        <h3 class="hero-heading">Join The Lions Den Today</h3>
 
       <div class="review-img-container">
+	<div class="avatar-container">
 	<img class="review-img" src="man1.jpg" alt="reviewer photo"/>
 	<img class="review-img" src="man3.jpg" alt="reviewer photo"/>
         <img class="review-img" src="man4.jpg" alt="reviewer photo"/>
         <img class="review-img" src="man5.jpg" alt="reviewer photo"/>
         <img class="review-img" src="man6.jpg" alt="reviewer photo"/>
-        <img class="review-img last" src="man2.jpg" alt="reviewer photo"/>
+        <img class="review-img" src="man2.jpg" alt="reviewer photo"/>
+	</div>
 	<span class="rating-text">800+ (5.0) &#9733; <br>Star reviews</span>
       </div>
 
       <div class="comment-container">
-      <p class="qoute">"I joined this online relationship camp hoping to improve communication with my partner, and it exceeded my expectations." - T_Morgan99</p>
+	<p class="qoute1">"I joined this online relationship camp hoping<br> to improve communication with my partner,<br> and it exceeded my expectations."<br> - T_Morgan99</p>
       </div>
     </div>
-    <div class="qoutes-section">
-      <span class="qoute">"Do you want to become the king before you get the kingdom to rule." - MR BIG OVA NIGHT </span>
-       <div class="join-container">
-    <button class="join-link-button"><a href="" class="join-link">Click to Join Now</a></button>
-  </div>
-    </div>
-  </div>
+
 </header>
-  </div>
 <main>
 </main>
 <footer>
