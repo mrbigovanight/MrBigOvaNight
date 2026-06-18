@@ -6,12 +6,15 @@ function menuToggle() {
 var menu = document.getElementById("menu");
 var headerMenu = document.getElementById("header-link-container");
 headerMenu.classList.toggle("new-header-link-container");
+var header = document.querySelector("header");
 menu.classList.toggle("none");
+header.classList.toggle("newHeader");
 const text = link.textContent.trim();
 if (text.includes('Close')) {
 link.innerHTML = '&#9776; Menu';
 } else {
 link.innerHTML = '&#9747; Close';
+
 } 
 
 }
