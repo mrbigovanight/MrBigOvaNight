@@ -1,4 +1,9 @@
-import { supabase } from './supabase.js'
+const supabaseUrl = "https://bcegumgewrotirizmtda.supabase.co";
+const supabaseKey = "sb_publishable_t6XEnrxIbOJ5CgSa-l4NfA_DQrcoKMN";
+export const supabase = window.supabase.createClient(
+  supabaseUrl,
+  supabaseKey
+);
 
 const form = document.getElementById('signupForm')
 
@@ -13,17 +18,20 @@ form.addEventListener('submit', async (e) => {
     password
   })
 
+  console.log("data:", data)
+console.log("error:", error)
+
   if (error) {
     alert(error.message)
     return
   }
 
   // If email confirmation is enabled
-  if (data.user && !data.session) {
-    alert("Check your email to confirm your account.")
-    window.location.href = "/login.html"
-    return
-  }
+  //if (data.user && !data.session) {
+  //  alert("Check your email to confirm your account.")
+  //  window.location.href = "../Pages/login.html"
+  //  return
+  //}
 
-  window.location.href = "/dashboard.html"
+  window.location.href = "../Pages/dashboard.html"
 })
