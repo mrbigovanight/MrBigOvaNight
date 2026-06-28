@@ -27,11 +27,11 @@ console.log("error:", error)
   }
 
   // If email confirmation is enabled
-  if (data.user && !data.session) {
-    alert("Check your email to confirm your account.")
-    window.location.href = "../Pages/login.html"
-    return
-  }
+  //if (data.user && !data.session) {
+  //  alert("Check your email to confirm your account.")
+  //  window.location.href = "../Pages/login.html"
+  //  return
+  //}
 
   window.location.href = "../Pages/dashboard.html"
 })
