@@ -1,4 +1,9 @@
-import { supabase } from './supabase.js'
+const supabaseUrl = "https://bcegumgewrotirizmtda.supabase.co";
+const supabaseKey = "sb_publishable_t6XEnrxIbOJ5CgSa-l4NfA_DQrcoKMN";
+export const supabase = window.supabase.createClient(
+  supabaseUrl,
+  supabaseKey
+);
 
 const form = document.getElementById('loginForm')
 
@@ -18,5 +23,5 @@ form.addEventListener('submit', async (e) => {
     return
   }
 
-  window.location.href = "/dashboard.html"
+  window.location.href = "../Pages/dashboard.html"
 })
