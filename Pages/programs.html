@@ -5,16 +5,15 @@
 <title>MRBON</title>   
 <meta name="viewport" content="width=device-width,initial-scale=1" />   
 <meta name="description" content="" />   
-<link rel="stylesheet" type="text/css" href="Styles/style.css" />   
-<link rel="icon" href="Content/logo.png"> 
+<link rel="stylesheet" type="text/css" href="../Styles/programs.css" /> 
+<link rel="icon" href="../Content/logo.png"/> 
 </head> 
 <body>
   
   <section class="body-section">
-       <nav id="menu">
-
+  <nav id="menu">
   <button onclick="programToggle()" class="nav-button nav-text">Programs <div>&#8964;</div></button>
-  <button id="programLink1" class="nav-button nav-choice"><a class="nav-link-text" href="Pages/programs.html" >Lions Den</a></button>
+  <button id="programLink1" class="nav-button nav-choice"><a class="nav-link-text" href="../Pages/programs.html" >Lions Den</a></button>
   <button onclick="videoToggle()" class="nav-button nav-text">Videos <div>&#8964;</div></button>
    <button id="videoLink1" class="nav-button nav-choice"><a class="nav-link-text" href="" >All</a></button>
   <button id="videoLink2" class="nav-button nav-choice"><a class="nav-link-text" href="" >Featured</a></button>
@@ -37,12 +36,6 @@
   <button id="aboutLink2" class="nav-button nav-choice"><a class="nav-link-text" href="" >MRBON</a></button>
   <div class="spacer-div"></div>
   </nav> 
-    
-  <section class="main-section">
-   
-    <section class="hero-section">
-      <section class="hero-section-filter">
-
 
       <div class="header-div">
 	<header>
@@ -51,57 +44,19 @@
 	    </span>
 	  </div>
 	  <div class="signup-container">
-          <a href="Pages/login.html" class="header-link login">login</a>
+          <a href="../Pages/login.html" class="header-link login">login</a>
 	  </div>
          </header>
+        
+	 <div id="program">
+         </div>
 
-               <h1 class="heading">PREPARE FOR STORMS,<br>BY EMBRACING THEM.</h1>
-      </div>
-    
-      <div class="action-container">
-    <div class="review-container">
-              <h3 class="hero-heading">Join The Lions Den Today</h3>
-
-      <div class="review-img-container">
-	<div class="avatar-container">
-	<img class="review-img" src="Content/man1.jpg" alt="reviewer photo"/>
-	<img class="review-img" src="Content/man3.jpg" alt="reviewer photo"/>
-        <img class="review-img" src="Content/man4.jpg" alt="reviewer photo"/>
-        <img class="review-img" src="Content/man5.jpg" alt="reviewer photo"/>
-        <img class="review-img" src="Content/man6.jpg" alt="reviewer photo"/>
-        <img class="review-img" src="Content/man2.jpg" alt="reviewer photo"/>
-	</div>
-	<span class="rating-text">800+ (5.0) &#9733; <br>Star reviews</span>
       </div>
 
-      <div class="comment-container">
-	<p class="qoute1">"I joined this online relationship camp<br> hoping to improve communication with my<br> partner, and it exceeded my expectations."<br> - T_Morgan99</p>
-      </div>
 
-      
-    </div>
+
 </section>
-</section>
-<main class="main-container">
-  <section class="featured-articles-container">
-    <h2>Featured Articles</h2>
-</section>
-
-<section class="programs-container">
-    <h2>The Lions Den Program</h2>
-</section>
-
-<section class="video-container">
-    <h2>Latest Videos</h2>
-</section>
-
-</main>
-<footer>
-</footer>
-
-
-  </section>
-  </section>
-  <script src="Scripts/main.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="../Scripts/programs.js"></script>
 </body> 
 </html>

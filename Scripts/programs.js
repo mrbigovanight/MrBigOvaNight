@@ -1,3 +1,41 @@
+console.log("programs.js loaded");
+console.log(window.supabase);
+const supabaseUrl = "https://bcegumgewrotirizmtda.supabase.co";
+const supabaseKey = "sb_publishable_t6XEnrxIbOJ5CgSa-l4NfA_DQrcoKMN";
+const supabaseClient = window.supabase.createClient(
+  supabaseUrl,
+  supabaseKey
+);
+
+const programDiv = document.getElementById("program");
+
+async function loadPrograms() {
+const { data, error } = await supabaseClient
+  .from('programs')
+  .select('*');
+
+  if (error) {
+  console.error(error);
+  return;
+  }
+
+  console.log("DATA:", data);
+console.log("ERROR:", error);
+console.log("LENGTH:", data?.length);
+
+  data.forEach(program => {
+  programDiv.innerHTML += `
+   <div class="card">
+      <img class="cardBanner" src="${program.banner}" alt="${program.title}"/>
+      <h2 class="cardTitle">${program.title}</h2>
+      <p class="cardDescription">${program.description}</p>
+    </div>`;
+  });
+
+}
+
+loadPrograms();
+
 var menu = document.getElementById("menu");
 if (menu) {
 menu.classList.add("none");
