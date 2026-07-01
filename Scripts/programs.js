@@ -1,7 +1,7 @@
 console.log("programs.js loaded");
 console.log(window.supabase);
-const supabaseUrl = "https://bcegumgewrotirizmtda.supabase.co";
-const supabaseKey = "sb_publishable_t6XEnrxIbOJ5CgSa-l4NfA_DQrcoKMN";
+const supabaseUrl = "https://lwcxxvuxoamzhyyizjdl.supabase.co/";
+const supabaseKey = "sb_publishable_EAzj4KOodBGijAiqA38skw_NawCLARv";
 const supabaseClient = window.supabase.createClient(
   supabaseUrl,
   supabaseKey
