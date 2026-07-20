@@ -6,10 +6,51 @@
 <meta name="viewport" content="width=device-width,initial-scale=1" />   
 <meta name="description" content="" />   
 <link rel="stylesheet" type="text/css" href="../Styles/login.css" />   
-<link rel="icon" href="../Content/logo.png"> 
+<link rel="icon" href="Images/MRBON.jpeg"> 
 </head> 
-<body> 
-  <div class="full-container">
+<body>
+  
+  <section class="body-section">
+       <nav id="menu">
+  <button onclick="programToggle()" class="nav-button nav-text">Programs <div>&#8964;</div></button>
+  <button id="programLink1" class="nav-button nav-choice"><a class="nav-link-text" href="Pages/programs.html" >All</a></button>
+  <button id="programLink1" class="nav-button nav-choice"><a class="nav-link-text" href="Pages/programs.html" >LIONS DEN</a></button>
+  <button id="programLink1" class="nav-button nav-choice"><a class="nav-link-text" href="Pages/programs.html" >MRBON FITNESS</a></button>
+  <button id="programLink1" class="nav-button nav-choice"><a class="nav-link-text" href="Pages/programs.html" >BOSS LADIES</a></button>
+  <button onclick="videoToggle()" class="nav-button nav-text">Videos <div>&#8964;</div></button>
+   <button id="videoLink1" class="nav-button nav-choice"><a class="nav-link-text" href="Pages/videos.html" >All</a></button>
+  <button id="videoLink2" class="nav-button nav-choice"><a class="nav-link-text" href="" >Featured</a></button>
+  <button id="videoLink3" class="nav-button nav-choice"><a class="nav-link-text" href="" >Recent</a></button>
+
+  <button onclick="imageToggle()" class="nav-button nav-text">Images <div>&#8964;</div></button>
+   <button id="imageLink1" class="nav-button nav-choice"><a class="nav-link-text" href="Pages/videos.html" >All</a></button>
+  <button id="imageLink2" class="nav-button nav-choice"><a class="nav-link-text" href="" >Featured</a></button>
+  <button id="imageLink3" class="nav-button nav-choice"><a class="nav-link-text" href="" >Recent</a></button>
+
+   <button onclick="socialToggle()" class="nav-button nav-text">Socials <div>&#8964;</div></button>
+  <button id="socialLink1" class="nav-button nav-choice"><a class="nav-link-text" href="https://www.tiktok.com/@mrbigovanight/video/7620087324042464525" >Tiktok</a></button>
+  <button id="socialLink2" class="nav-button nav-choice"><a class="nav-link-text" href="https://www.youtube.com/@MrBigOvaNight" >Youtube</a></button>
+  <button id="socialLink3" class="nav-button nav-choice"><a class="nav-link-text" href="" >Reddit</a></button>
+  <button id="socialLink4" class="nav-button nav-choice"><a class="nav-link-text" href="" >Tumblr</a></button>
+  <button id="socialLink5" class="nav-button nav-choice"><a class="nav-link-text" href="https://www.instagram.com/mrbigovanight/" >Instagram</a></button>
+  <button id="socialLink6" class="nav-button nav-choice"><a class="nav-link-text" href="https://x.com/mrbigovanight" >X (Twitter)</a></button>
+
+
+  <button onclick="articleToggle()" class="nav-button nav-text">Articles <div>&#8964;</div></button>
+  <button id="articleLink1" class="nav-button nav-choice"><a class="nav-link-text" href="Pages/articles.html" >All</a></button>
+  <button id="articleLink2" class="nav-button nav-choice"><a class="nav-link-text" href="" >Featured</a></button>
+  <button id="articleLink3" class="nav-button nav-choice"><a class="nav-link-text" href="" >Recent</a></button>
+   <button id="socialLink7" class="nav-button"><a class="nav-text" href="" >Affiliates</a></button>
+  <button class="nav-button"><a class="nav-text" href="" >Donate</a></button>
+  <button onclick="aboutToggle()" class="nav-button nav-text">About <div>&#8964;</div></button>
+  <button id="aboutLink1" class="nav-button nav-choice"><a class="nav-link-text" href="" >Lions Den</a></button>
+  <button id="aboutLink2" class="nav-button nav-choice"><a class="nav-link-text" href="" >MRBON</a></button>
+  <button id="aboutLink2" class="nav-button nav-choice"><a class="nav-link-text" href="" >F.A.Q.</a></button>
+  <div class="spacer-div"></div>
+  </nav> 
+    
+  <section class="main-section">
+   <div class="full-container">
   <div class="img-container">
     <img class="signup-image" src="../Content/tjjebanez-portrait-10099159.jpg"/>
   </div>   
@@ -28,6 +69,10 @@
   </div>
   </div>
   <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
-  <script type="module" src="../Scripts/signup.js"></script>
+  <script type="module" src="../Scripts/signup.js"></script> 
+  </section>
 </body> 
 </html>
+
+
+
