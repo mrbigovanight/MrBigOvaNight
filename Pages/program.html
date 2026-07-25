@@ -1,0 +1,76 @@
+<!DOCTYPE html> 
+<html lang="en"> 
+<head>   
+<meta charset="UTF-8" />   
+<title>MRBON</title>   
+<meta name="viewport" content="width=device-width,initial-scale=1" />   
+<meta name="description" content="" />   
+<link rel="stylesheet" type="text/css" href="../Styles/program.css" /> 
+<link rel="icon" href="../Content/logo.png"/> 
+</head> 
+<body>
+  
+  <section class="body-section">
+<nav id="menu">
+  <button onclick="programToggle()" class="nav-button nav-text nav-folder">Programs <div>&#8964;</div></button>
+  <button id="programLink1" class="nav-button nav-choice"><a class="nav-link-text" href="Pages/programs.html" >All</a></button>
+  <button id="programLink1" class="nav-button nav-choice"><a class="nav-link-text" href="Pages/programs.html" >LIONS DEN</a></button>
+  <button id="programLink1" class="nav-button nav-choice"><a class="nav-link-text" href="Pages/programs.html" >MRBON FITNESS</a></button>
+  <button id="programLink1" class="nav-button nav-choice"><a class="nav-link-text" href="Pages/programs.html" >BOSS LADIES</a></button>
+  <button onclick="videoToggle()" class="nav-button nav-text nav-folder">Videos <div>&#8964;</div></button>
+   <button id="videoLink1" class="nav-button nav-choice"><a class="nav-link-text" href="Pages/videos.html" >All</a></button>
+  <button id="videoLink2" class="nav-button nav-choice"><a class="nav-link-text" href="" >Featured</a></button>
+  <button id="videoLink3" class="nav-button nav-choice"><a class="nav-link-text" href="" >Recent</a></button>
+
+  <button onclick="imageToggle()" class="nav-button nav-text nav-folder">Images <div>&#8964;</div></button>
+   <button id="imageLink1" class="nav-button nav-choice"><a class="nav-link-text" href="Pages/videos.html" >All</a></button>
+  <button id="imageLink2" class="nav-button nav-choice"><a class="nav-link-text" href="" >Featured</a></button>
+  <button id="imageLink3" class="nav-button nav-choice"><a class="nav-link-text" href="" >Recent</a></button>
+
+   <button onclick="socialToggle()" class="nav-button nav-text nav-folder">Socials <div>&#8964;</div></button>
+  <button id="socialLink1" class="nav-button nav-choice"><a class="nav-link-text" href="https://www.tiktok.com/@mrbigovanight/video/7620087324042464525" >Tiktok</a></button>
+  <button id="socialLink2" class="nav-button nav-choice"><a class="nav-link-text" href="https://www.youtube.com/@MrBigOvaNight" >Youtube</a></button>
+  <button id="socialLink3" class="nav-button nav-choice"><a class="nav-link-text" href="" >Reddit</a></button>
+  <button id="socialLink4" class="nav-button nav-choice"><a class="nav-link-text" href="" >Tumblr</a></button>
+  <button id="socialLink5" class="nav-button nav-choice"><a class="nav-link-text" href="https://www.instagram.com/mrbigovanight/" >Instagram</a></button>
+  <button id="socialLink6" class="nav-button nav-choice"><a class="nav-link-text" href="https://x.com/mrbigovanight" >X (Twitter)</a></button>
+
+
+  <button onclick="articleToggle()" class="nav-button nav-text nav-folder">Articles <div>&#8964;</div></button>
+  <button id="articleLink1" class="nav-button nav-choice"><a class="nav-link-text" href="Pages/articles.html" >All</a></button>
+  <button id="articleLink2" class="nav-button nav-choice"><a class="nav-link-text" href="" >Featured</a></button>
+  <button id="articleLink3" class="nav-button nav-choice"><a class="nav-link-text" href="" >Recent</a></button>
+   <button id="socialLink7" class="nav-button nav-affiliates"><a class="nav-text" href="" >Affiliates</a></button>
+  <button class="nav-button nav-donate"><a class="nav-text" href="" >Donate</a></button>
+  <button onclick="aboutToggle()" class="nav-button nav-text nav-folder">About <div>&#8964;</div></button>
+  <button id="aboutLink2" class="nav-button nav-choice"><a class="nav-link-text" href="" >MRBON</a></button>
+  <button id="aboutLink2" class="nav-button nav-choice"><a class="nav-link-text" href="" >F.A.Q.</a></button>
+  <div class="spacer-div"></div>
+  </nav> 
+      <div class="header-div">
+	<header>
+	  <div class="header-link-container" id="header-link-container">
+	    <span id="header-menu-span" class="header-link" onclick="menuToggle()">
+	    </span>
+	  </div>
+	  <div class="signup-container">
+          <a href="../Pages/login.html" class="header-link login">login</a>
+	  </div>
+         </header>
+        
+	 <div id="program-main">
+	   <img id="program-banner"/>
+	   <div id="program_images"></div>
+	   <h1 id="program-title"></h1>
+	   <span id="program-description"></span>
+	   <div id="program-videos">
+	   </div>
+	    <article id="program-articles"></article>
+    
+      </div>
+
+</section>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="../Scripts/program.js"></script>
+</body> 
+</html>

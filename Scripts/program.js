@@ -1,0 +1,168 @@
+const params = new URLSearchParams(window.location.search);
+
+const slug = params.get("slug");
+
+console.log("Program slug:", slug);
+
+const supabaseUrl = "https://lwcxxvuxoamzhyyizjdl.supabase.co/";
+const supabaseKey = "sb_publishable_EAzj4KOodBGijAiqA38skw_NawCLARv";
+const supabaseClient = window.supabase.createClient(
+  supabaseUrl,
+  supabaseKey
+);
+
+
+async function loadProgram() {
+
+  const { data, error } = await supabaseClient
+    .from("programs")
+    .select("*")
+    .eq("slug", slug)
+    .single();
+
+
+  if (error) {
+    console.error(error);
+    return;
+  }
+
+  document.getElementById("program-title").textContent = data.title;
+  document.getElementById("program-description").textContent = data.description;
+  const banner = document.getElementById("program-banner")
+  banner.src = data.banner;
+  
+  const programVideos = document.getElementById("program-videos");
+  programVideos.innerHTML = "";
+
+  [data.video_one, data.video_two, data.video_three].forEach(iframeHTML => {
+  if (iframeHTML) {
+    const wrapper = document.createElement("div");
+    wrapper.className = "video-wrapper";
+    wrapper.innerHTML = iframeHTML;
+    programVideos.appendChild(wrapper);
+    iframeHTML.className = "iframe";
+  }
+  });
+
+  const programImages = document.getElementById("program_images");
+  programImages.innerHTML = "";
+  [data.image_one, data.image_two].forEach(src => {
+  if (src) {
+  const img_wrapper = document.createElement("div");
+  img_wrapper.className = "image_wrapper";
+
+  const img = document.createElement("img");
+  img.src = src;
+  img.alt = "";
+  img.loading = "lazy";
+  img.className = "program_images";
+
+  img_wrapper.appendChild(img);
+  programImages.appendChild(img_wrapper);
+  }
+  });
+}
+  loadProgram();
+
+var menu = document.getElementById("menu");
+if (menu) {
+menu.classList.add("none");
+}
+var link = document.getElementById("header-menu-span");
+if (link) {
+link.innerHTML = '&#9776; Menu';
+}
+function menuToggle() {
+var menu = document.getElementById("menu");
+var headerMenu = document.getElementById("header-link-container");
+if (headerMenu) {
+headerMenu.classList.toggle("new-header-link-container");
+}
+var header = document.querySelector("header");
+if (menu) {
+menu.classList.toggle("none");
+}
+if (header) {
+header.classList.toggle("newHeader");
+}
+const text = link.textContent.trim();
+if (text.includes('Close')) {
+if (link) {
+link.innerHTML = '&#9776; Menu';
+}
+} else {
+if (link) {
+link.innerHTML = '&#9747; Close';
+}
+} 
+
+}
+
+const programLink1 = document.getElementById("programLink1");
+const programLink2 = document.getElementById("programLink2");
+const programLink3 = document.getElementById("programLink3");
+const programLink4 = document.getElementById("programLink4");
+function programToggle() {
+  if (programLink1) {
+  programLink1.classList.toggle("none");
+  programLink2.classList.toggle("none");
+  programLink3.classList.toggle("none");
+  programLink4.classList.toggle("none");
+  }
+}
+
+const videoLink1 = document.getElementById("videoLink1");
+const videoLink2 = document.getElementById("videoLink2");
+const videoLink3 = document.getElementById("videoLink3");
+const imageLink1 = document.getElementById("imageLink1");
+const imageLink2 = document.getElementById("imageLink2");
+const imageLink3 = document.getElementById("imageLink3");
+
+function videoToggle() {
+  videoLink1.classList.toggle("none");
+  videoLink2.classList.toggle("none");
+  videoLink3.classList.toggle("none");
+}
+
+function imageToggle() {
+  imageLink1.classList.toggle("none");
+  imageLink2.classList.toggle("none");
+  imageLink3.classList.toggle("none");
+}
+
+const articleLink1 = document.getElementById("articleLink1");
+const articleLink2 = document.getElementById("articleLink2");
+const articleLink3 = document.getElementById("articleLink3");
+function articleToggle() {
+  articleLink1.classList.toggle("none");
+  articleLink2.classList.toggle("none");
+  articleLink3.classList.toggle("none");
+}
+
+const socialLink1 = document.getElementById("socialLink1");
+const socialLink2 = document.getElementById("socialLink2");
+const socialLink3 = document.getElementById("socialLink3");
+const socialLink4 = document.getElementById("socialLink4");
+const socialLink5 = document.getElementById("socialLink5");
+const socialLink6 = document.getElementById("socialLink6");
+const socialLink7 = document.getElementById("socialLink7");
+
+function socialToggle() {
+socialLink1.classList.toggle("none");
+socialLink2.classList.toggle("none");
+socialLink3.classList.toggle("none");
+socialLink4.classList.toggle("none");
+socialLink5.classList.toggle("none");
+socialLink6.classList.toggle("none");
+socialLink7.classList.toggle("none");
+}
+
+const aboutLink1 = document.getElementById("aboutLink1");
+const aboutLink2 = document.getElementById("aboutLink2");
+
+function aboutToggle() {
+  aboutLink1.classList.toggle("none");
+  aboutLink2.classList.toggle("none");
+}
+
+

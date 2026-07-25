@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed&family=Quicksand:wght@300..700&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
 
 * {
 font-family: "Roboto Mono";
@@ -176,10 +176,11 @@ max-width: 180px;
 border-right: 1px solid black;
 overflow-y: auto;
 flex-shrink: 0;
-background-color: #000000;
+background-color: #ffffff;
 overflow: auto;
 scrollbar-width: none;
 -ms-overflow-style: none;
+padding: 5px;
 }
 
 nav::-webkit-scrollbar {
@@ -226,14 +227,28 @@ align-items: flex-start;
 justify-content: flex-start;
 min-width: 180px;
 width: 20vw;
-max-width: 20vw;
-border:none;
-border-bottom: 1px solid black;
-padding: 8px 0px 8px 25px;
-background: linear-gradient(95deg,#2a2725, #1d1d1d 50%);
+max-width: 180px;
+padding: 8px 0px 8px 8px;
+background-color: rgba(255,255,255,0.5);
 backdrop-filter: brightness(100%);
 cursor: pointer;
 text-align: left;
+margin-top: 0px;
+border: none;
+border-right: 1px solid black;
+border-left: 1px solid black;
+border-radius: 0px;
+}
+
+.nav-margin {
+margin-top: 5px;
+background-color: rgba(255,255,255,0.2);
+border-radius: 10px 10px 0px 0px;
+}
+
+.nav-margin-one {
+background-color: #1d1d1d;
+border-radius: 10px 10px 0px 0px;
 }
 
 .nav-button:hover {
@@ -241,7 +256,7 @@ background-color: rgba(108, 77, 36, 0.5);
 }
 
 .nav-choice {
-background-color: rgba(52,42,30,0.0);
+background-color: rgba(0,0,0,1);
 }
 
 .nav-choice:hover {
@@ -250,10 +265,12 @@ background-color: rgba(63, 50, 36, 0.5);
 
 .nav-text {
 text-decoration: none;
-color: #c7c7c7;
+color: #ffffff;
 white-space:nowrap;
-font-size: 1rem;
-text-shadow: -2px 2px 5px rgba(0,0,0,0.4);
+font-size: 0.8rem;
+font-weight: 300;
+text-shadow: -2px 2px 5px rgba(0,0,0,0.2);
+font-family: "Quicksand", sans-serif;
 }
 
 .nav-link-text {
@@ -261,7 +278,13 @@ text-decoration: none;
 color: #909090;
 white-space:nowrap;
 font-size: 1rem;
-text-shadow: -2px 2px 5px rgba(0,0,0,0.4);
+text-shadow: -2px 2px 5px rgba(0,0,0,0.2);
+font-family: "Quicksand";
+font-weight: 300;
+}
+
+.nav-border-bottom {
+border-radius: 0px 0px 10px 10px;
 }
 
 .main-section {
