@@ -2,35 +2,12 @@ var menu = document.getElementById("menu");
 if (menu) {
 menu.classList.add("none");
 }
-var link = document.getElementById("header-menu-span");
-if (link) {
-link.innerHTML = '&#9776; Menu';
-}
-function menuToggle() {
-var menu = document.getElementById("menu");
-var headerMenu = document.getElementById("header-link-container");
-if (headerMenu) {
-headerMenu.classList.toggle("new-header-link-container");
-}
-var header = document.querySelector("header");
-if (menu) {
-menu.classList.toggle("none");
-}
-if (header) {
-header.classList.toggle("newHeader");
-}
-const text = link.textContent.trim();
-if (text.includes('Close')) {
-if (link) {
-link.innerHTML = '&#9776; Menu';
-}
-} else {
+else {
 if (link) {
 link.innerHTML = '&#9747; Close';
 }
 } 
 
-}
 
 const programLink1 = document.getElementById("programLink1");
 const programLink2 = document.getElementById("programLink2");

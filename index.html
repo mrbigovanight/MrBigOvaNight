@@ -5,93 +5,69 @@
 <title>MRBON</title>   
 <meta name="viewport" content="width=device-width,initial-scale=1" />   
 <meta name="description" content="" />   
-<link rel="stylesheet" type="text/css" href="Styles/style.css" />   
+<link rel="stylesheet" type="text/css" href="Styles/style.css" />
+<link rel="stylesheet" type="text/css" href="Styles/nav.css" />
+<link rel="stylesheet" type="text/css" href="Styles/header.css" /> 
 <link rel="icon" href="Images/MRBON.jpeg"> 
 </head> 
 <body>
   
   <section class="body-section">
-       <nav id="menu">
-  <button onclick="programToggle()" class="nav-margin-one nav-button nav-text">Programs ⌄</button>
-  <a class="nav-link-text" href="Pages/programs.html" ><button id="programLink1" class="nav-button nav-choice">All</button></a>
- <a class="nav-link-text" href="Pages/programs.html" ><button id="programLink2" class="nav-button nav-choice">LIONS DEN</button></a>
- <a class="nav-link-text" href="Pages/programs.html" ><button id="programLink3" class="nav-button nav-choice">MRBON</button></a>
+ <script>
+   fetch("Pages/nav.html")
+     .then(response => response.text())
+     .then(data => {document.getElementById("menu").innerHTML = data; });
+</script>
 
-  <button onclick="videoToggle()" class="nav-margin nav-button nav-text">Videos ⌄</button>
-  <a class="nav-link-text" href="Pages/videos.html" ><button id="programLink1" class="nav-button nav-choice">All</button></a>
-  <a class="nav-link-text" href="Pages/programs.html" ><button id="programLink1" class="nav-button nav-choice">Featured</button></a>
-<a class="nav-link-text" href="Pages/programs.html" ><button id="programLink1" class="nav-button nav-choice">Recent</button></a>
-  <button onclick="imageToggle()" class=" nav-margin nav-button nav-text">Images ⌄</button>
-  <a class="nav-link-text" href="Pages/programs.html" ><button id="programLink1" class="nav-button nav-choice">All</button></a>
-  <a class="nav-link-text" href="Pages/programs.html" ><button id="programLink1" class="nav-button nav-choice">Featured</button></a>
-<a class="nav-link-text" href="Pages/programs.html" ><button id="programLink1" class="nav-button nav-choice">Recent</button></a>
-   <button onclick="socialToggle()" class="nav-margin nav-button nav-text">Socials ⌄</button>
-<a class="nav-link-text" href="Pages/programs.html" ><button id="programLink1" class="nav-button nav-choice">TikTok</button></a>
-<a class="nav-link-text" href="Pages/programs.html" ><button id="programLink1" class="nav-button nav-choice">Youtube</button></a>
-<a class="nav-link-text" href="Pages/programs.html" ><button id="programLink1" class="nav-button nav-choice">Instagram</button></a><a class="nav-link-text" href="Pages/programs.html" ><button id="programLink1" class="nav-button nav-choice">Facebook</button></a>
-<a class="nav-link-text" href="Pages/programs.html" ><button id="programLink1" class="nav-button nav-choice">Reddit</button></a>
-<a class="nav-link-text" href="Pages/programs.html" ><button id="programLink1" class="nav-button nav-choice">Tumblr</button></a>
-<a class="nav-link-text" href="Pages/programs.html" ><button id="programLink1" class="nav-button nav-choice">X (Twitter)</button></a>
-
-  <button onclick="articleToggle()" class="nav-margin nav-button nav-text">Articles ⌄</button>
- <a class="nav-link-text" href="Pages/programs.html" ><button id="programLink1" class="nav-button nav-choice">All</button></a>
-<a class="nav-link-text" href="Pages/programs.html" ><button id="programLink1" class="nav-button nav-choice">Featured</button></a>
-<a class="nav-link-text" href="Pages/programs.html" ><button id="programLink1" class="nav-button nav-choice">Recent</button></a>
-<a class="nav-link-text" href="Pages/programs.html" ><button id="programLink1" class="affiliates nav-button nav-choice">Affiliates</button></a>
-<a class="nav-link-text" href="Pages/programs.html" ><button id="programLink1" class="sponsorships nav-button nav-choice">Sponsorships</button></a>
-<a class="nav-link-text" href="Pages/programs.html" ><button id="programLink1" class="donations nav-button nav-choice">Donations</button></a>
-
-  
-<button onclick="aboutToggle()" class="nav-margin nav-button nav-text">About ⌄</button>
-<a class="nav-link-text" href="Pages/programs.html" ><button id="programLink1" class="nav-button nav-choice">LIONS DEN</button></a>
-<a class="nav-link-text" href="Pages/programs.html" ><button id="programLink1" class="nav-button nav-choice">MRBON</button></a>
-<a class="nav-link-text" href="Pages/programs.html" ><button id="programLink1" class="nav-button nav-choice">F.A.Q.</button></a>
-
-
-  <div class="spacer-div"></div>
-  </nav> 
+<nav id="menu"></nav>
     
   <section class="main-section">
-   
     <section class="hero-section">
       <section class="hero-section-filter">
 
 
-      <div class="header-div">
-	<header>
-	  <div class="header-link-container" id="header-link-container">
-	    <span id="header-menu-span" class="header-link" onclick="menuToggle()">
-	    </span>
-	  </div>
-	  <div class="signup-container">
-          <a href="Pages/login.html" class="header-link login">login</a>
-	  </div>
-         </header>
-
-                     </div>
+      <script>
+      fetch("Pages/header.html")
+	.then(response => response.text())
+	.then(data => { document.getElementById("header").innerHTML = data;     
+      const link = document.getElementById("header-menu-span");
+      if (link) { link.innerHTML = '&#9776; Menu'; }
+      });
+      </script>
+      <div class="header-div" id="header"></div>
 	
     <div class="review-container">
 
       <h1 class="heading">PREPARE FOR STORMS,<br>BY EMBRACING THEM.</h1>
-
-
-      <div id="comment_container" class="comment-container">
-      </div>
+        <span class="qoute">The goal is to help clients become the best version of themselves—physically, mentally, and emotionally. Whether you're looking to lose weight, gain muscle, boost your confidence, strengthen your relationship, or develop healthier lifestyle habits, this coaching provides personalized support, accountability, and actionable plans to help you achieve lasting results.</span>
+         </div>
 
 </section>
 </section>
 <main class="main-container">
-  <section class="featured-articles-container">
-    <h2>Featured Articles</h2>
-</section>
+   <iframe class="video" src="https://www.youtube.com/embed/69DHnp-X4Gg" title="Xiothedreamer&#39;s Life Is Getting WORSE" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe> 
+ <div class="checks_container">
+   <div class="check1">
+	<div class="check">
+	  <h2>Get help 1v1.</h2>
+          <p class="qoute1">Whether you're working on improving your fitness, building healthier habits, increasing confidence, or strengthening your relationships, each session is designed to provide practical strategies, honest feedback, and the motivation you need to succeed.</p>
+	</div>
+	<div class="check">
+	  <h2>Gain access to all content.</h2>
+	  <p class="qoute1">Unlock a complete library of exclusive resources designed to support your personal growth and success. Get unlimited access to workout programs, nutrition guides, relationship advice, educational videos, live sessions, downloadable resources, and premium coaching materials—all in one place.</p>
+	</div>
+   </div>
+   <div class="check2">
+	<div class="check">
+	  <h2>Build better relationships.</h2>
+	  <p class="qoute1">Healthy relationships are built on trust, communication, and mutual respect. Learn how to strengthen your connections, resolve conflict effectively, and create deeper, more meaningful relationships with your partner, family, and the people who matter most.</p>
+	</div>
+	<div class="check"><h2>Take back your life.</h2>
+	  <p class="qoute1">Break free from unhealthy habits, self-doubt, and distractions that hold you back. Develop the discipline, confidence, and mindset needed to regain control of your health, your time, and your future so you can live with purpose and intention.</p></div>
+      </div>
+ </div>
+<div id="comment_container" class="comment-container"></div>
 
-<section class="programs-container">
-    <h2>The Lions Den Program</h2>
-</section>
-
-<section class="video-container">
-    <h2>Latest Videos</h2>
-</section>
 
 </main>
 <footer>
@@ -101,5 +77,6 @@
   </section>
   </section>
   <script src="Scripts/main.js"></script>
+  <script src="Scripts/header.js"></script>
 </body> 
 </html>
