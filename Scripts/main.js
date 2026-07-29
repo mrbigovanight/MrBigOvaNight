@@ -99,4 +99,48 @@ function aboutToggle() {
   aboutLink2.classList.toggle("none");
 }
 
+const reviews = [
+  "I joined this online relationship camp hoping to improve communication with my partner, and it exceeded my expectations.",
+  "The exercises were practical and easy to apply, and our conversations immediately got more respectful and productive.",
+  "I liked the structure—short sessions, clear prompts, and helpful guidance that made it feel manageable even with a busy schedule.",
+  "The camp helped me understand triggers and respond instead of react. We’ve had fewer arguments and more teamwork.",
+  "I came in skeptical, but the feedback and activities really improved our connection. The atmosphere felt supportive and safe.",
+  "By the end of the program we had better routines for check-ins, and it made long-term planning together feel a lot easier."
+];
 
+const images = [
+"Content/man1.jpg",
+"Content/man2.jpg",
+"Content/man3.jpg",
+"Content/man4.jpg",
+"Content/man5.jpg",
+"Content/man6.jpg"];
+
+
+
+let max = reviews.length;
+let num = 0;
+
+
+
+const comment_container = document.getElementById("comment_container");
+
+
+
+function render() {
+comment_container.innerHTML = `<img class="review-img" src=${images[num]} alt="profile_picture"><span class="qoute1">${reviews[num]}</span><button class="next_button" id="next_button" onclick="switcher">&rsaquo;</button>`;
+
+document.getElementById("next_button").addEventListener("click", switcher);
+
+}
+
+
+
+function switcher() {
+num = (num + 1) % max;
+render();
+}
+
+
+
+render();
